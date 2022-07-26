@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "+qesQD/gEG/X/LN2GzFwx/hxBFUeO6wZQoNRzbpImlupawWh9YRRR4Q9rcT3tajnnofLPhDYpwvh/tB4hwmk5A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ITSupportCBB\\Documents\\CapacitacionDotnet\\MeetingManager\\MeetingManager.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ITSupportCBB\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\ITSupportCBB\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\ITSupportCBB\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\ITSupportCBB\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\ITSupportCBB\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\ITSupportCBB\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
