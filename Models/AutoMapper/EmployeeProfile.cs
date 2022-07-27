@@ -12,7 +12,7 @@ namespace MeetingManager.Models.AutoMapper
   {
     public EmployeeProfile()
     {
-      CreateMap<CreateEmployeeDto, Employee>();
+      CreateMap<CreateEmployeeDto, Employee>().ReverseMap();
       CreateMap<UpdateEmployeeDto, Employee>();
       CreateMap<Employee, EmployeeDto>();
     }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using MeetingManager.Data;
 using MeetingManager.Models.Dtos.MeetingRoom;
+using MeetingManager.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -50,9 +51,10 @@ namespace MeetingManager.Controllers
       {
         return BadRequest();
       }
-      await _context.AddAsync(createMeetingRoomDto);
+      var meetingRoom = mapper.Map<MeetingRoom>(createMeetingRoomDto);
+      await _context.AddAsync(meetingRoom);
       await _context.SaveChangesAsync();
-      return Ok(createMeetingRoomDto);
+      return Ok(meetingRoom);
     }
 
     [HttpPut]
@@ -62,9 +64,10 @@ namespace MeetingManager.Controllers
       {
         return BadRequest();
       }
-      _context.Entry(updateMeetingRoomDto).State = EntityState.Modified;
+      var meetingRoom = mapper.Map<MeetingRoom>(updateMeetingRoomDto);
+      _context.Update(meetingRoom);
       await _context.SaveChangesAsync();
-      return Ok(updateMeetingRoomDto);
+      return Ok(meetingRoom);
     }
 
     [HttpDelete("{id}")]

@@ -12,7 +12,7 @@ namespace MeetingManager.Models.AutoMapper
   {
     public MeetingRoomProfile()
     {
-      CreateMap<CreateMeetingRoomDto, MeetingRoom>();
+      CreateMap<CreateMeetingRoomDto, MeetingRoom>().ReverseMap();
       CreateMap<UpdateMeetingRoomDto, MeetingRoom>();
       CreateMap<MeetingRoom, MeetingRoomDto>();
     }

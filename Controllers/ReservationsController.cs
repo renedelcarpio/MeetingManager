@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using MeetingManager.Data;
 using MeetingManager.Models.Dtos.Reservation;
+using MeetingManager.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -50,9 +51,10 @@ namespace MeetingManager.Controllers
       {
         return BadRequest();
       }
-      await _context.AddAsync(createReservationDto);
+      var reservation = mapper.Map<Reservation>(createReservationDto);
+      await _context.AddAsync(reservation);
       await _context.SaveChangesAsync();
-      return Ok(createReservationDto);
+      return Ok(reservation);
     }
 
     [HttpPut]
@@ -62,9 +64,10 @@ namespace MeetingManager.Controllers
       {
         return BadRequest();
       }
-      _context.Entry(updateReservationDto).State = EntityState.Modified;
+      var reservation = mapper.Map<Reservation>(updateReservationDto);
+      _context.Update(reservation);
       await _context.SaveChangesAsync();
-      return Ok(updateReservationDto);
+      return Ok(reservation);
     }
 
     [HttpDelete("{id}")]

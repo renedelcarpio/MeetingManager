@@ -12,7 +12,7 @@ namespace MeetingManager.Models.AutoMapper
   {
     public AttendeeProfile()
     {
-      CreateMap<CreateAttendeeDto, Attendee>();
+      CreateMap<CreateAttendeeDto, Attendee>().ReverseMap();
       CreateMap<UpdateAttendeeDto, Attendee>();
       CreateMap<Attendee, AttendeeDto>();
     }

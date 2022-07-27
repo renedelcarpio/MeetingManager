@@ -8,6 +8,7 @@ namespace MeetingManager.Models.Dtos.Reservation
 {
   public class UpdateReservationDto
   {
+    public int Id { get; set; }
     [Required]
     public DateTime ReservationDate { get; set; }
     public int ReservedBy { get; set; }

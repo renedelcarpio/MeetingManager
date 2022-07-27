@@ -8,6 +8,7 @@ namespace MeetingManager.Models.Dtos.Attendee
 {
   public class UpdateAttendeeDto
   {
+    public int Id { get; set; }
     public int? ReservationId { get; set; }
     public int EmployeeId { get; set; }
 

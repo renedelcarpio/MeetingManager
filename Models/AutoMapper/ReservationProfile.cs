@@ -12,7 +12,7 @@ namespace MeetingManager.Models.AutoMapper
   {
     public ReservationProfile()
     {
-      CreateMap<CreateReservationDto, Reservation>();
+      CreateMap<CreateReservationDto, Reservation>().ReverseMap();
       CreateMap<UpdateReservationDto, Reservation>();
       CreateMap<Reservation, ReservationDto>();
     }
