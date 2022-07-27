@@ -52,7 +52,7 @@ namespace MeetingManager.Controllers
       {
         return BadRequest();
       }
-      var attendee = mapper.Map<Employee>(createAttendeeDto);
+      var attendee = mapper.Map<Attendee>(createAttendeeDto);
       await _context.AddAsync(attendee);
       await _context.SaveChangesAsync();
       return Ok(attendee);

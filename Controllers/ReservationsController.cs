@@ -51,6 +51,7 @@ namespace MeetingManager.Controllers
       {
         return BadRequest();
       }
+      var employee = await _context.Employees.FirstOrDefaultAsync(e => e.Id == createReservationDto.EmployeeId);
       var reservation = mapper.Map<Reservation>(createReservationDto);
       await _context.AddAsync(reservation);
       await _context.SaveChangesAsync();

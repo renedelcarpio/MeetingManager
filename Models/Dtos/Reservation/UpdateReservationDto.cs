@@ -11,8 +11,7 @@ namespace MeetingManager.Models.Dtos.Reservation
     public int Id { get; set; }
     [Required]
     public DateTime ReservationDate { get; set; }
-    public int ReservedBy { get; set; }
-    public int MeetinRoomId { get; set; }
     public int EmployeeId { get; set; }
+    public int MeetingRoomId { get; set; }
   }
 }

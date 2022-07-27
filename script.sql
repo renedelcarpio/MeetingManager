@@ -21,8 +21,6 @@ GO
 CREATE TABLE [Reserva] (
     [Id] int NOT NULL IDENTITY,
     [ReservationDate] datetime2 NOT NULL,
-    [ReservedBy] int NOT NULL,
-    [MeetinRoomId] int NOT NULL,
     [EmployeeId] int NOT NULL,
     [MeetingRoomId] int NOT NULL,
     CONSTRAINT [PK_Reserva] PRIMARY KEY ([Id]),

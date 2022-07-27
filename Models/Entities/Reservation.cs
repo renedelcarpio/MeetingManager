@@ -14,9 +14,8 @@ namespace MeetingManager.Models.Entities
 
     [Required]
     public DateTime ReservationDate { get; set; }
-    public int ReservedBy { get; set; }
-    public int MeetinRoomId { get; set; }
     public int EmployeeId { get; set; }
+    public int MeetingRoomId { get; set; }
 
     public virtual MeetingRoom MeetingRoom { get; set; }
     public virtual Employee Employee { get; set; }
